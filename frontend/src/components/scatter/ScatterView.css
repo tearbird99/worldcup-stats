@@ -1,0 +1,238 @@
+/* 최상위 컨테이너 레이아웃 및 너비 설정 */
+.scatter-view {
+  width: 1050px;
+  max-width: 95vw;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+/* 상단 컨트롤 영역 플렉스박스 레이아웃 */
+.scatter-view .top-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+/* 뒤로가기 버튼 스타일 및 호버 애니메이션 효과 */
+.back-icon-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background-color: #4285F4;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(66, 133, 244, 0.3);
+  transition: background-color 0.2s;
+}
+
+.back-icon-btn:hover {
+  background-color: #3367d6;
+}
+
+.back-icon-btn img {
+  width: 24px;
+  height: 24px;
+}
+
+/* 연도, 포지션, X/Y축 선택 드롭다운을 포함하는 컨테이너 스타일 */
+.selectors-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* 드롭다운 요소 기본 스타일링 */
+.selectors-container select {
+  padding: 8px 12px;
+  font-size: 0.95rem;
+  color: #333;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+}
+
+/* 그룹 간의 시각적 분리선 스타일 */
+.selectors-container .divider {
+  margin: 0 10px;
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+/* X축, Y축 및 옵션 선택기 레이아웃 */
+.axis-selector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.axis-selector label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #555;
+}
+
+/* 우측 상단 컨트롤 그룹 레이아웃 */
+.right-controls-group {
+  display: flex;
+  align-items: center;
+}
+
+/* Total, Per 90 토글 스위치 배경 컨테이너 스타일 */
+.calc-toggles {
+  display: flex;
+  background: white;
+  border-radius: 8px;
+  padding: 4px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* 계산 모드 토글 개별 버튼 기본 및 활성 상태 스타일 */
+.calc-toggles button {
+  padding: 8px 16px;
+  border: none;
+  background: transparent;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.calc-toggles button.active {
+  background: #2c3e50;
+  color: white;
+}
+
+/* 산점도 차트가 렌더링되는 메인 대시보드 카드 레이아웃 */
+.scatter-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 600px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  padding: 20px;
+}
+
+/* 차트 내 데이터 포인트 마우스 오버 시 나타나는 커스텀 툴팁 컨테이너 스타일 */
+.scatter-tooltip {
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid #eee;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* 툴팁 내부 선수명 텍스트 스타일 */
+.st-name {
+  margin: 0 0 8px 0;
+  padding-bottom: 4px;
+  font-size: 1rem;
+  color: #2c3e50;
+  border-bottom: 1px solid #eee;
+}
+
+/* 툴팁 내부 소속팀 및 연도 텍스트 스타일 */
+.st-team {
+  font-size: 0.8rem;
+  font-weight: normal;
+  color: #7f8c8d;
+}
+
+/* 툴팁 내부 개별 통계 수치 텍스트 스타일 */
+.st-stat {
+  margin: 4px 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #34495e;
+}
+
+/* 최소 출전 시간 필터링 토글 스위치 위치 지정 */
+.min-mins-toggle {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* 토글 스위치 안내 라벨 텍스트 스타일 */
+.toggle-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #7f8c8d;
+}
+
+/* 커스텀 토글 스위치(체크박스) 디자인 */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+}
+
+.switch input {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+/* 토글 스위치 배경 슬라이더 기본 상태 스타일 */
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 24px;
+  transition: .3s;
+}
+
+/* 토글 스위치 내부 원형 조작부 스타일 */
+.slider:before {
+  position: absolute;
+  bottom: 3px;
+  left: 3px;
+  content: "";
+  width: 18px;
+  height: 18px;
+  background-color: white;
+  border-radius: 50%;
+  transition: .3s;
+}
+
+/* 체크박스 활성화 시 슬라이더 배경색 변경 */
+input:checked + .slider {
+  background-color: #4285F4;
+}
+
+/* 체크박스 활성화 애니메이션 */
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+/* Recharts 차트 클릭 시 발생하는 기본 포커스 외곽선 제거 */
+.scatter-card *:focus,
+.recharts-wrapper:focus,
+.recharts-surface:focus {
+  outline: none !important;
+}
