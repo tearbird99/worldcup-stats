@@ -1,0 +1,383 @@
+/* 레이더 뷰 최상위 컨테이너 레이아웃 및 너비 설정 */
+.radar-view {
+  width: 1050px;
+  max-width: 95vw;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+/* 상단 컨트롤 영역 (뒤로가기, 검색창, 계산 모드 토글) 플렉스박스 레이아웃 */
+.top-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+/* 우측 상단 컨트롤 그룹 (계산 모드 토글) 레이아웃 */
+.right-controls-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* 뒤로가기 버튼 스타일 및 호버 애니메이션 효과 */
+.back-icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  padding: 10px;
+  cursor: pointer;
+  background: white;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: all 0.2s;
+}
+
+.back-icon-btn:hover {
+  background: #f5f7fa;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+.back-icon-btn img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+/* 검색창 컨테이너 레이아웃 (드롭다운 위치 기준점) */
+.search-container {
+  position: relative;
+  z-index: 50;
+  flex: 1;
+}
+
+/* 검색 입력창 그룹 스타일 */
+.input-group {
+  display: flex;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.input-group input {
+  flex: 1;
+  padding: 14px 20px;
+  font-size: 1rem;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+/* 검색창 우측 장식용 플러스 버튼 스타일 */
+.plus-btn {
+  width: 50px;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+  background: #4285F4;
+  border: none;
+  border-radius: 0 12px 12px 0;
+}
+
+/* 검색 결과 자동완성 드롭다운 메뉴 스타일 */
+.dropdown {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  left: 0;
+  max-height: 300px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #f0f0f0;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-bottom: 1px solid #f9f9f9;
+}
+
+.dropdown-item:hover { 
+  background: #f5f7fa; 
+}
+
+/* 계산 모드 토글 스위치 배경 컨테이너 스타일 */
+.calc-toggles {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  box-sizing: border-box;
+  height: 48px;
+  padding: 5px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* 계산 모드 토글 개별 버튼 기본 및 활성 상태 스타일 */
+.calc-toggles button {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #777;
+  white-space: nowrap;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.calc-toggles button.active {
+  color: white;
+  background: #2c3e50;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* 차트 및 테이블이 포함된 메인 대시보드 카드 레이아웃 */
+.dashboard-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 600px;
+  padding: 30px;
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+}
+
+/* 선택된 선수 비교 데이터 테이블 컨테이너 스타일 */
+.comparison-table-container {
+  margin-bottom: 20px;
+  overflow: hidden;
+  border: 1px solid #eee;
+  border-radius: 16px;
+}
+
+.comparison-table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* 데이터 테이블 행 레이아웃 */
+.table-row {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  background: white;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+/* 테이블 헤더(스탯 항목명) 스타일 */
+.table-header {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #7f8c8d;
+  letter-spacing: 0.5px;
+  background: #f8f9fa;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.table-header .col-stat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+  font-size: 0.75rem;
+  line-height: 1.2;
+}
+
+/* 테이블 데이터 셀 텍스트 스타일 */
+.table-row .col-stat {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* 선수명 및 소속팀 정보 출력 셀 레이아웃 */
+.col-name {
+  display: flex;
+  flex: 2;
+  gap: 10px;
+  align-items: center;
+  min-width: 180px;
+}
+
+.name-wrapper {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.p-name { font-size: 0.95rem; font-weight: 700; color: #2c3e50; }
+.p-sub { font-size: 0.75rem; color: #95a5a6; }
+
+/* 공통 통계 데이터 셀 레이아웃 */
+.col-stat {
+  flex: 1;
+  color: #34495e;
+  text-align: center;
+}
+
+/* 출전 시간(Minutes) 전용 폰트 스타일 */
+.col-stat.mins { font-weight: 500; color: #7f8c8d; }
+
+/* 삭제 버튼 영역 레이아웃 및 스타일 */
+.col-remove {
+  display: flex;
+  justify-content: flex-end;
+  width: 40px;
+}
+
+.remove-btn {
+  padding: 0;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: #bdc3c7;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.remove-btn:hover { color: #e74c3c; }
+
+/* 선수 구분용 범례 도트(점) 스타일 */
+.dot {
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+/* Recharts 라이브러리가 렌더링될 래퍼 컨테이너 레이아웃 */
+.chart-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  min-height: 450px;
+}
+
+/* 선택된 선수가 없을 때 출력되는 안내문 오버레이 스타일 */
+.empty-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 15px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #888;
+  text-align: center;
+  pointer-events: none;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid #eee;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transform: translate(-50%, -50%);
+}
+
+/* 포지션 전환용 버튼 그룹 (하단 탭) 레이아웃 */
+.position-toggles {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #f5f5f5;
+}
+
+/* 포지션 전환 버튼 기본 및 활성 상태 스타일 */
+.position-toggles button {
+  min-width: 70px;
+  padding: 10px 28px;
+  font-weight: 700;
+  color: #555;
+  cursor: pointer;
+  background: white;
+  border: 1px solid #e0e6ed;
+  border-radius: 50px;
+  transition: all 0.2s;
+}
+
+.position-toggles button:hover { background: #f8f9fa; border-color: #d0d7de; }
+
+.position-toggles button.active {
+  color: white;
+  background: #4285F4;
+  border-color: #4285F4;
+  box-shadow: 0 4px 12px rgba(66, 133, 244, 0.25);
+}
+
+/* 차트 이미지 캡처(스크린샷) 버튼 레이아웃 및 스타일 */
+.screenshot-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  padding: 8px;
+  cursor: pointer;
+  background: white;
+  border: 1px solid #e0e6ed;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: all 0.2s;
+}
+
+.screenshot-btn.bottom-right {
+  position: absolute;
+  right: 0;
+}
+
+.screenshot-btn:hover {
+  background: #4285F4;
+  border-color: #d0d7de;
+  transform: translateY(-2px);
+}
+
+.screenshot-btn img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+/* ALL 뷰 모드 활성화 시 다수의 스탯 항목 표시를 위한 테이블 밀도 조정 */
+.comparison-table.all-mode .table-header .col-stat {
+  padding: 0 2px;
+  font-size: 0.6rem;
+  word-break: keep-all;
+}
+
+.comparison-table.all-mode .table-row .col-stat {
+  padding: 0 2px;
+  font-size: 0.65rem;
+}
+
+.comparison-table.all-mode .col-name {
+  flex: 1.5;
+  min-width: 120px;
+}
+
+.comparison-table.all-mode .p-name {
+  font-size: 0.85rem;
+}
+
+/* Recharts 라이브러리 차트 클릭 시 발생하는 브라우저 기본 포커스 외곽선 제거 */
+.scatter-card *:focus,
+.recharts-wrapper:focus,
+.recharts-surface:focus {
+  outline: none !important;
+}
