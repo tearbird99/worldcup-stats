@@ -1,3 +1,9 @@
+/* 레이아웃 어긋남 방지 */
+* {
+  box-sizing: border-box;
+}
+
+/* 색상 테마 */
 :root {
   --primary: #4285F4;
   --bg-color: #f0f4f8;
@@ -5,6 +11,7 @@
   --text-grey: #7f8c8d;
 }
 
+/* 문서 기본 여백 제거 및 기본 폰트, 배경 */
 body {
   margin: 0;
   padding: 0;
@@ -13,6 +20,7 @@ body {
   color: var(--text-dark);
 }
 
+/* 애플리케이션 최상위 래퍼 컨테이너 레이아웃 및 최대 너비 제한 */
 .app-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -21,6 +29,7 @@ body {
   box-sizing: border-box;
 }
 
+/* 홈 화면 콘텐츠 영역 수직, 수평 중앙 정렬 */
 .home-content {
   display: flex;
   flex-direction: column;
@@ -30,6 +39,7 @@ body {
   text-align: center;
 }
 
+/* 메인 타이틀 상단 장식용 이미지 크기 및 그림자 효과 설정 */
 .legends-image {
   max-width: 100%;
   height: auto;
@@ -39,6 +49,7 @@ body {
   filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
 }
 
+/* 메인 타이틀 타이포그래피 */
 .main-title {
   font-size: 3rem;
   font-weight: 800;
@@ -47,6 +58,7 @@ body {
   letter-spacing: -1px;
 }
 
+/* 서브 타이틀 타이포그래피 */
 .sub-title {
   font-size: 1.1rem;
   color: var(--text-grey);
@@ -54,6 +66,7 @@ body {
   font-weight: 500;
 }
 
+/* 메뉴 카드 컨테이너 Flex 래핑 배열 */
 .menu-grid {
   display: flex;
   gap: 40px;
@@ -62,6 +75,7 @@ body {
   flex-wrap: wrap;
 }
 
+/* 개별 메뉴 카드 컴포넌트n*/
 .menu-card {
   background: white;
   width: 280px;
@@ -76,12 +90,14 @@ body {
   border: 2px solid transparent;
 }
 
+/* 메뉴 카드 마우스 오버 시 부유 애니메이션 */
 .menu-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 20px 40px rgba(0,0,0,0.1);
   border-color: #e0e6ed;
 }
 
+/* 메뉴 카드 내부 아이콘 래퍼 원형 배경 */
 .card-icon {
   font-size: 4rem;
   margin-bottom: 25px;
@@ -94,6 +110,7 @@ body {
   border-radius: 50%;
 }
 
+/* 메뉴 카드 제목 폰트 */
 .menu-card h2 {
   font-size: 1.5rem;
   font-weight: 700;
@@ -101,6 +118,7 @@ body {
   color: var(--text-dark);
 }
 
+/* 메뉴 카드 설명글 폰트 */
 .menu-card p {
   color: #95a5a6;
   font-size: 0.95rem;
@@ -108,13 +126,61 @@ body {
   line-height: 1.5;
 }
 
+/* 뷰 전환 시 컴포넌트에 적용할 페이드 인 애니메이션 키프레임 정의 */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* Recharts 라이브러리 및 차트 요소 클릭 시 발생하는 브라우저 기본 포커스 외곽선 제거 */
 .chart-wrapper *:focus,
 .recharts-wrapper:focus,
 .recharts-surface:focus {
   outline: none !important;
+}
+
+/* 모바일 반응형 처리 (화면 너비 768px 이하) */
+@media (max-width: 768px) {
+  /* 좌우 패딩 축소 */
+  .app-container {
+    padding: 10px;
+  }
+
+  /* Flex 컨테이너가 자식 요소들을 수직 및 수평 중앙 정렬하도록 강제 보정 */
+  .home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  /* 타이틀 폰트 크기 및 정렬 수정 */
+  .main-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  .sub-title {
+    font-size: 0.95rem;
+    text-align: center;
+  }
+
+  /* 가로 배열된 메뉴 카드를 세로 배열로 전환 및 중앙 정렬 */
+  .menu-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+  }
+
+  /* 메뉴 카드 크기 조절 및 자동 마진 적용 */
+  .menu-card {
+    width: 100%;
+    max-width: 320px;
+    padding: 30px 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

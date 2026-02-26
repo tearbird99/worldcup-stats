@@ -1,4 +1,4 @@
-/* 레이더 뷰 최상위 컨테이너 레이아웃 및 너비 설정 */
+/* 레이더 뷰 최상위 컨테이너 */
 .radar-view {
   width: 1050px;
   max-width: 95vw;
@@ -6,7 +6,7 @@
   padding-top: 20px;
 }
 
-/* 상단 컨트롤 영역 (뒤로가기, 검색창, 계산 모드 토글) 플렉스박스 레이아웃 */
+/* 상단 컨트롤 영역 플렉스박스 */
 .top-controls {
   display: flex;
   align-items: center;
@@ -15,14 +15,14 @@
   margin-bottom: 20px;
 }
 
-/* 우측 상단 컨트롤 그룹 (계산 모드 토글) 레이아웃 */
+/* 우측 상단 컨트롤 그룹 (계산 모드 토글) */
 .right-controls-group {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-/* 뒤로가기 버튼 스타일 및 호버 애니메이션 효과 */
+/* 뒤로가기 버튼 및 호버 애니메이션 */
 .back-icon-btn {
   display: flex;
   align-items: center;
@@ -50,14 +50,14 @@
   object-fit: contain;
 }
 
-/* 검색창 컨테이너 레이아웃 (드롭다운 위치 기준점) */
+/* 검색창 컨테이너 */
 .search-container {
   position: relative;
   z-index: 50;
   flex: 1;
 }
 
-/* 검색 입력창 그룹 스타일 */
+/* 검색 입력창 그룹 */
 .input-group {
   display: flex;
   background: white;
@@ -74,7 +74,7 @@
   outline: none;
 }
 
-/* 검색창 우측 장식용 플러스 버튼 스타일 */
+/* 검색창 우측 장식용 플러스 버튼 */
 .plus-btn {
   width: 50px;
   font-size: 1.5rem;
@@ -85,7 +85,7 @@
   border-radius: 0 12px 12px 0;
 }
 
-/* 검색 결과 자동완성 드롭다운 메뉴 스타일 */
+/* 검색 결과 자동완성 드롭다운 메뉴 */
 .dropdown {
   position: absolute;
   top: 110%;
@@ -112,7 +112,7 @@
   background: #f5f7fa; 
 }
 
-/* 계산 모드 토글 스위치 배경 컨테이너 스타일 */
+/* 계산 모드 토글 스위치 배경 컨테이너 */
 .calc-toggles {
   display: flex;
   align-items: center;
@@ -125,7 +125,7 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
-/* 계산 모드 토글 개별 버튼 기본 및 활성 상태 스타일 */
+/* 계산 모드 토글 개별 버튼 기본 및 활성 상태 */
 .calc-toggles button {
   padding: 8px 16px;
   font-size: 0.9rem;
@@ -145,7 +145,7 @@
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-/* 차트 및 테이블이 포함된 메인 대시보드 카드 레이아웃 */
+/* 차트 및 테이블이 포함된 메인 대시보드 카드 */
 .dashboard-card {
   display: flex;
   flex-direction: column;
@@ -156,7 +156,7 @@
   box-shadow: 0 10px 40px rgba(0,0,0,0.05);
 }
 
-/* 선택된 선수 비교 데이터 테이블 컨테이너 스타일 */
+/* 선택된 선수 비교 데이터 테이블 컨테이너 */
 .comparison-table-container {
   margin-bottom: 20px;
   overflow: hidden;
@@ -170,7 +170,7 @@
   width: 100%;
 }
 
-/* 데이터 테이블 행 레이아웃 */
+/* 데이터 테이블 행 */
 .table-row {
   display: flex;
   align-items: center;
@@ -179,7 +179,7 @@
   border-bottom: 1px solid #f5f5f5;
 }
 
-/* 테이블 헤더(스탯 항목명) 스타일 */
+/* 테이블 헤더(스탯 항목명) */
 .table-header {
   font-size: 0.8rem;
   font-weight: 600;
@@ -198,13 +198,13 @@
   line-height: 1.2;
 }
 
-/* 테이블 데이터 셀 텍스트 스타일 */
+/* 테이블 데이터 셀 텍스트 */
 .table-row .col-stat {
   font-size: 0.8rem;
   font-weight: 500;
 }
 
-/* 선수명 및 소속팀 정보 출력 셀 레이아웃 */
+/* 선수명 및 소속팀 정보 출력 셀 */
 .col-name {
   display: flex;
   flex: 2;
@@ -222,17 +222,17 @@
 .p-name { font-size: 0.95rem; font-weight: 700; color: #2c3e50; }
 .p-sub { font-size: 0.75rem; color: #95a5a6; }
 
-/* 공통 통계 데이터 셀 레이아웃 */
+/* 공통 통계 데이터 셀 */
 .col-stat {
   flex: 1;
   color: #34495e;
   text-align: center;
 }
 
-/* 출전 시간(Minutes) 전용 폰트 스타일 */
+/* 출전 시간 전용 폰트 */
 .col-stat.mins { font-weight: 500; color: #7f8c8d; }
 
-/* 삭제 버튼 영역 레이아웃 및 스타일 */
+/* 삭제 버튼 영역 */
 .col-remove {
   display: flex;
   justify-content: flex-end;
@@ -251,7 +251,7 @@
 
 .remove-btn:hover { color: #e74c3c; }
 
-/* 선수 구분용 범례 도트(점) 스타일 */
+/* 선수 구분용 범례 도트 스타일 */
 .dot {
   flex-shrink: 0;
   width: 10px;
@@ -259,7 +259,7 @@
   border-radius: 50%;
 }
 
-/* Recharts 라이브러리가 렌더링될 래퍼 컨테이너 레이아웃 */
+/* Recharts 라이브러리가 렌더링될 래퍼 */
 .chart-wrapper {
   position: relative;
   display: flex;
@@ -269,7 +269,7 @@
   min-height: 450px;
 }
 
-/* 선택된 선수가 없을 때 출력되는 안내문 오버레이 스타일 */
+/* 선택된 선수가 없을 때 출력되는 안내문 */
 .empty-overlay {
   position: absolute;
   top: 50%;
@@ -287,7 +287,7 @@
   transform: translate(-50%, -50%);
 }
 
-/* 포지션 전환용 버튼 그룹 (하단 탭) 레이아웃 */
+/* 포지션 전환용 버튼 그룹 */
 .position-toggles {
   position: relative;
   display: flex;
@@ -299,7 +299,7 @@
   border-top: 1px solid #f5f5f5;
 }
 
-/* 포지션 전환 버튼 기본 및 활성 상태 스타일 */
+/* 포지션 전환 버튼 */
 .position-toggles button {
   min-width: 70px;
   padding: 10px 28px;
@@ -321,7 +321,7 @@
   box-shadow: 0 4px 12px rgba(66, 133, 244, 0.25);
 }
 
-/* 차트 이미지 캡처(스크린샷) 버튼 레이아웃 및 스타일 */
+/* 차트 스크린샷 버튼 */
 .screenshot-btn {
   display: flex;
   align-items: center;
@@ -380,4 +380,43 @@
 .recharts-wrapper:focus,
 .recharts-surface:focus {
   outline: none !important;
+}
+
+/* 모바일 반응형 처리 (화면 너비 768px 이하) */
+@media (max-width: 768px) {
+  .top-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .right-controls-group {
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .position-toggles {
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-bottom: 50px;
+  }
+
+  .position-toggles button {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    flex: 1;
+    min-width: calc(33.333% - 8px);
+  }
+
+  /* 테이블은 좌우 스크롤을 허용하여 넘침 방지 */
+  .comparison-table-container {
+    overflow-x: auto;
+  }
+
+  .comparison-table {
+    min-width: 600px;
+  }
+
+  .chart-wrapper {
+    min-height: 300px;
+  }
 }

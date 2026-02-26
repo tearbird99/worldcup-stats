@@ -6,7 +6,7 @@
   --text-grey: #7f8c8d;
 }
 
-/* body 태그 기본 스타일 및 웹 폰트 설정 */
+/* body 태그 기본 스타일 및 웹 폰트 */
 body {
   margin: 0;
   padding: 0;
@@ -15,7 +15,7 @@ body {
   color: var(--text-dark);
 }
 
-/* 애플리케이션 최상위 컨테이너 레이아웃 */
+/* 애플리케이션 최상위 컨테이너 */
 .app-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -24,7 +24,7 @@ body {
   box-sizing: border-box;
 }
 
-/* 홈 화면 콘텐츠 영역 중앙 정렬 설정 */
+/* 홈 화면 콘텐츠 영역 중앙 정렬 */
 .home-content {
   display: flex;
   flex-direction: column;
@@ -34,7 +34,7 @@ body {
   text-align: center;
 }
 
-/* 메인 타이틀 상단 이미지 스타일 및 반응형 크기 조절 */
+/* 메인 타이틀 상단 이미지 및 반응형 크기 조절 */
 .legends-image {
   max-width: 100%;
   height: auto;
@@ -92,7 +92,7 @@ body {
   border-color: #e0e6ed;
 }
 
-/* 메뉴 카드 내부 아이콘 원형 배경 설정 */
+/* 메뉴 카드 내부 아이콘 원형 배경 */
 .card-icon {
   font-size: 4rem;
   margin-bottom: 25px;
@@ -105,7 +105,7 @@ body {
   border-radius: 50%;
 }
 
-/* 메뉴 카드 제목 폰트 스타일 */
+/* 메뉴 카드 제목 폰트 */
 .menu-card h2 {
   font-size: 1.5rem;
   font-weight: 700;
@@ -113,7 +113,7 @@ body {
   color: var(--text-dark);
 }
 
-/* 메뉴 카드 설명글 폰트 스타일 */
+/* 메뉴 카드 설명글 폰트 */
 .menu-card p {
   color: #95a5a6;
   font-size: 0.95rem;

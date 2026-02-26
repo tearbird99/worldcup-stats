@@ -1,4 +1,4 @@
-/* 최상위 컨테이너 레이아웃 및 너비 설정 */
+/* 최상위 컨테이너 */
 .scatter-view {
   width: 1050px;
   max-width: 95vw;
@@ -6,7 +6,7 @@
   padding-top: 20px;
 }
 
-/* 상단 컨트롤 영역 플렉스박스 레이아웃 */
+/* 상단 컨트롤 영역 플렉스박스 */
 .scatter-view .top-controls {
   display: flex;
   align-items: center;
@@ -14,7 +14,7 @@
   margin-bottom: 20px;
 }
 
-/* 뒤로가기 버튼 스타일 및 호버 애니메이션 효과 */
+/* 뒤로가기 버튼 스타일 및 호버 애니메이션 */
 .back-icon-btn {
   width: 48px;
   height: 48px;
@@ -39,7 +39,7 @@
   height: 24px;
 }
 
-/* 연도, 포지션, X/Y축 선택 드롭다운을 포함하는 컨테이너 스타일 */
+/* 연도, 포지션, X/Y축 선택 드롭다운을 포함하는 컨테이너 */
 .selectors-container {
   flex: 1;
   display: flex;
@@ -51,7 +51,7 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
-/* 드롭다운 요소 기본 스타일링 */
+/* 드롭다운 요소 기본 */
 .selectors-container select {
   padding: 8px 12px;
   font-size: 0.95rem;
@@ -63,14 +63,14 @@
   cursor: pointer;
 }
 
-/* 그룹 간의 시각적 분리선 스타일 */
+/* 그룹 간의 시각적 분리선 */
 .selectors-container .divider {
   margin: 0 10px;
   font-size: 1.2rem;
   color: #ccc;
 }
 
-/* X축, Y축 및 옵션 선택기 레이아웃 */
+/* X축, Y축 및 옵션 선택기 */
 .axis-selector {
   display: flex;
   align-items: center;
@@ -81,15 +81,17 @@
   font-size: 0.9rem;
   font-weight: 600;
   color: #555;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
-/* 우측 상단 컨트롤 그룹 레이아웃 */
+/* 우측 상단 컨트롤 그룹 */
 .right-controls-group {
   display: flex;
   align-items: center;
 }
 
-/* Total, Per 90 토글 스위치 배경 컨테이너 스타일 */
+/* Total, Per 90 토글 스위치 배경 컨테이너 */
 .calc-toggles {
   display: flex;
   background: white;
@@ -98,7 +100,7 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
-/* 계산 모드 토글 개별 버튼 기본 및 활성 상태 스타일 */
+/* 계산 모드 토글 개별 버튼 기본 및 활성 상태 */
 .calc-toggles button {
   padding: 8px 16px;
   border: none;
@@ -116,7 +118,7 @@
   color: white;
 }
 
-/* 산점도 차트가 렌더링되는 메인 대시보드 카드 레이아웃 */
+/* 산점도 차트가 렌더링되는 메인 대시보드 카드 */
 .scatter-card {
   position: relative;
   display: flex;
@@ -129,7 +131,7 @@
   padding: 20px;
 }
 
-/* 차트 내 데이터 포인트 마우스 오버 시 나타나는 커스텀 툴팁 컨테이너 스타일 */
+/* 차트 내 데이터 포인트 마우스 오버 시 나타나는 커스텀 툴팁 컨테이너 */
 .scatter-tooltip {
   padding: 12px 16px;
   background: rgba(255, 255, 255, 0.95);
@@ -138,7 +140,7 @@
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-/* 툴팁 내부 선수명 텍스트 스타일 */
+/* 툴팁 내부 선수명 텍스트 */
 .st-name {
   margin: 0 0 8px 0;
   padding-bottom: 4px;
@@ -147,14 +149,14 @@
   border-bottom: 1px solid #eee;
 }
 
-/* 툴팁 내부 소속팀 및 연도 텍스트 스타일 */
+/* 툴팁 내부 소속팀 및 연도 텍스트 */
 .st-team {
   font-size: 0.8rem;
   font-weight: normal;
   color: #7f8c8d;
 }
 
-/* 툴팁 내부 개별 통계 수치 텍스트 스타일 */
+/* 툴팁 내부 개별 통계 수치 텍스트 */
 .st-stat {
   margin: 4px 0;
   font-size: 0.9rem;
@@ -162,7 +164,7 @@
   color: #34495e;
 }
 
-/* 최소 출전 시간 필터링 토글 스위치 위치 지정 */
+/* 최소 출전 시간 필터링 토글 스위치 */
 .min-mins-toggle {
   position: absolute;
   top: 20px;
@@ -173,14 +175,14 @@
   gap: 10px;
 }
 
-/* 토글 스위치 안내 라벨 텍스트 스타일 */
+/* 토글 스위치 안내 라벨 텍스트 */
 .toggle-label {
   font-size: 0.85rem;
   font-weight: 600;
   color: #7f8c8d;
 }
 
-/* 커스텀 토글 스위치(체크박스) 디자인 */
+/* 커스텀 토글 스위치(체크박스) */
 .switch {
   position: relative;
   display: inline-block;
@@ -194,7 +196,7 @@
   opacity: 0;
 }
 
-/* 토글 스위치 배경 슬라이더 기본 상태 스타일 */
+/* 토글 스위치 배경 슬라이더 기본 상태 */
 .slider {
   position: absolute;
   top: 0;
@@ -207,7 +209,7 @@
   transition: .3s;
 }
 
-/* 토글 스위치 내부 원형 조작부 스타일 */
+/* 토글 스위치 내부 원형 조작부 */
 .slider:before {
   position: absolute;
   bottom: 3px;
@@ -235,4 +237,51 @@ input:checked + .slider:before {
 .recharts-wrapper:focus,
 .recharts-surface:focus {
   outline: none !important;
+}
+
+/* 모바일 반응형 처리 (화면 너비 768px 이하) */
+@media (max-width: 768px) {
+  .scatter-view .top-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .selectors-container {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .axis-selector {
+    width: calc(50% - 5px);
+    justify-content: space-between;
+  }
+
+  .axis-selector select {
+    width: 100%;
+  }
+
+  .selectors-container .divider {
+    display: none;
+  }
+
+  .right-controls-group {
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  /* 토글 위치를 차트 영역 안쪽 상단에서 중앙 상단으로 분리 */
+  .min-mins-toggle {
+    position: relative;
+    top: 0;
+    right: 0;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .scatter-card {
+    flex-direction: column;
+    padding: 15px 10px;
+  }
 }
