@@ -6,8 +6,8 @@ import {
 import './ScatterView.css'
 import backIcon from '../../assets/icon_back.png'
 
-// 로컬 백엔드 서버 주소 (초기 개발 환경 세팅)
-const API_BASE_URL = 'http://localhost:8000'
+// 백엔드 서버 주소
+const API_BASE_URL = 'https://worldcupstats.onrender.com'
 
 // 포지션별 스캐터 차트 X축/Y축 선택을 위한 스탯 항목 옵션 정의
 const POSITION_STAT_OPTIONS = {

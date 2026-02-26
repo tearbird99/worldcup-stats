@@ -8,8 +8,8 @@ import './RadarView.css'
 import backIcon from '../../assets/icon_back.png'
 import cameraIcon from '../../assets/icon_camera.png'
 
-// 로컬 백엔드 서버 주소
-const API_BASE_URL = 'http://localhost:8000'
+// 백엔드 서버 주소
+const API_BASE_URL = 'https://worldcupstats.onrender.com'
 
 // 차트 데이터 시각화에 사용할 색상 배열
 const COLORS = ['#4285F4', '#FF007F', '#00CC66', '#FF8800', '#9933CC']
