@@ -407,6 +407,20 @@
     min-width: calc(33.333% - 8px);
   }
 
+  .screenshot-btn {
+    position: relative !important; /* 버튼 겹침 해제 */
+    top: auto;
+    right: auto;
+    bottom: auto;
+    margin-top: 10px;
+    width: 100%;
+    max-width: 200px;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   /* 테이블은 좌우 스크롤을 허용하여 넘침 방지 */
   .comparison-table-container {
     overflow-x: auto;
