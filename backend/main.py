@@ -148,6 +148,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# UptimeRobot 모니터링 코드 추가
+@app.get("/")
+def health_check():
+    return {"status": "ok", "message": "API is running"}
+
 @app.get("/api/years")
 def get_years():
     """이용 가능한 월드컵 연도 목록 반환."""
