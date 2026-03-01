@@ -29,7 +29,7 @@
 - `Python`: 백엔드 로직 작성
 - `FastAPI`: 빠르고 가벼운 비동기 REST API 서버 구축
 - `Uvicorn`: FastAPI 서버 구동을 위한 ASGI 서버
-- 배포: Render (`https://worldcupstats.onrender.com`)
+- 배포: https://worldcup-stats.vercel.app/
 
 **Data Pipeline**
 - 역대 월드컵 선수 스탯 JSON 파일 (Sofascore의 데이터 크롤링 및 가공)
