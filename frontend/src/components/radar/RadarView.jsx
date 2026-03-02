@@ -159,7 +159,7 @@ function RadarView({ onBack, initialPlayer }) {
       }
       
       setSelectedItems(prev => {
-        if (prev.find(i => i.displayId === newItem.displayId || (i.meta && i.meta.name === item.name))) {
+        if (prev.find(i => i.displayId === newItem.displayId)) {
           return prev
         }
         newItem.color = COLORS[prev.length % COLORS.length]
