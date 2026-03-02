@@ -142,7 +142,7 @@ function RadarView({ onBack, initialPlayer }) {
   // 검색 결과에서 선수 선택 시 스탯 데이터를 Fetch하여 상태에 추가
   const addItem = useCallback(async (item) => {
     // 중복 추가 방지 검증 로직
-    if (selectedItems.find(i => i.displayId === item.id || (i.meta && i.meta.name === item.name))) {
+    if (selectedItems.find(i => i.displayId === item.id)) {
       setSearchResults([])
       setQuery('')
       return
